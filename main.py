@@ -10,11 +10,11 @@ logger = logging.getLogger(__name__)
 
 # Connect to the PostgreSQL database
 conn = psycopg2.connect(
-    host='YOUR_DB_HOST',
-    port='YOUR_DB_PORT',
-    database='YOUR_DB_NAME',
-    user='YOUR_DB_USER',
-    password='YOUR_DB_PASSWORD'
+    host='localhost',
+    port='5432',
+    database='chatbot',
+    user='your_username',
+    password='rishi@123'
 )
 cursor = conn.cursor()
 
@@ -92,7 +92,7 @@ def error(update: Update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
 # Set up the Telegram bot token
-TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+TOKEN = '5541091861:AAGvV4D3iB2CN5il4QWbZuTdTWxB6WxN2cM'
 
 def main():
     """Start the bot."""
